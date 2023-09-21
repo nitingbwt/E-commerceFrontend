@@ -8,7 +8,6 @@ import Footer from './Footer';
 import Brand from './Brand';
 import BestSeller from './BestSeller';
 import Poster from './Poster';
-import Test from './Test';
 // import Login from './Login';
 
 const Home = () => {
@@ -17,7 +16,6 @@ const Home = () => {
     {/* <Login /> */}
     <Navbar />
     <HeroSlider />
-    <Test/>
     <ShopNow />
     <Products />
     <BestDeals />
