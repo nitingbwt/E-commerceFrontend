@@ -44,11 +44,11 @@ const HeroSlider = () => {
                 data-scs-animation-delay="500"
                 style={{ animationDelay: "500ms", opacity: "1" }}
               >
-                <img
+                {/* <img
                   className="img-fluid"
                   src={img1}
                   alt="Image Description"
-                />
+                /> */}
               </div>
             </div>
           </div>

@@ -8,6 +8,8 @@ import Footer from './Footer';
 import Brand from './Brand';
 import BestSeller from './BestSeller';
 import Poster from './Poster';
+import RecentlyView from './RecentlyView';
+import OnsaleProduct from './OnsaleProduct';
 // import Login from './Login';
 
 const Home = () => {
@@ -21,6 +23,8 @@ const Home = () => {
     <BestDeals />
     <BestSeller />
     <Poster />
+    <RecentlyView />
+    <OnsaleProduct />
     <Brand />
     <Footer />
     </>
