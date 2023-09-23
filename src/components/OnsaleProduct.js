@@ -14,7 +14,7 @@ import poster from "../images/poster.jpg";
 const OnsaleProduct = () => {
   return (
     <>
-    <div class="container d-none d-lg-block mb-3">
+    <div class="container d-none d-lg-block mb-5">
                 <div class="row">
                     <div class="col-wd-3 col-md-3">
                         <div class="widget_column">

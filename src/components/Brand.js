@@ -39,46 +39,47 @@ const Brand = (props) => {
               // infinite={true}
               // autoPlay={props.deviceType !== "mobile" ? true : false}
               // autoPlaySpeed={2000}
+              showDots={true}
               removeArrowOnDeviceType={["tablet", "mobile"]}
             >
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img1} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img1} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img2} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img2} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img3} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img3} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img4} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img4} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img5} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img5} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img6} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img6} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img1} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img1} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
               <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1">
-                  <img src={img2} alt="brand image" />
+                <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                  <img src={img2} alt="brand image" className="img-fluid" />
                 </NavLink>
               </div>
             </Carousel>

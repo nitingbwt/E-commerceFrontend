@@ -422,7 +422,7 @@ sup {
   overflow: hidden;
   color: #0062bd !important;
   font-weight: 700 !important;
-  min-height: 4rem;
+  min-height: 3.5rem;
 }
 
 .product_price span {
@@ -469,6 +469,7 @@ sup {
   position: absolute;
 }
 
+
 .product_item__footer {
   display: none;
 }
@@ -485,6 +486,7 @@ sup {
 .product_item:hover .product_item__footer {
   display: block;
 }
+
 
 /* -------------------------------------------------- Best Deals Section ------------------------------------------------- */
 
@@ -594,8 +596,15 @@ sup {
   top: 0;
 }
 /* ----------------------------------------- Best Seller -------------------------------------------- */
+
+
 .best_seller__section{
-  padding: 4rem 0 ;
+  padding: 1rem 0 ;
+}
+
+.best_seller__item{
+  padding-top: 2rem;
+  padding-bottom: 5.5rem;
 }
 
 .nav-tabs.seller_nav__link .nav-item {
@@ -613,8 +622,7 @@ sup {
   color: #565b5e !important;
 }
 .nav-tabs.seller_nav__link .nav-item.show .nav-link, .nav-tabs.seller_nav__link .nav-link.active {
-  font-weight: 700;
-  color: #000;
+  color: #000 !important;
   background-color: #fff;
   border: 2px solid #fed700 !important;
   border: none;
@@ -664,8 +672,11 @@ background-size: cover;
   position: relative;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 2.5rem;
 }
+
+/* .product_item{
+  padding-bottom: 3rem;
+} */
 
 .product_item__title {
   font-size: 1.4rem;
@@ -675,27 +686,64 @@ background-size: cover;
   font-size: 1.5rem;
 }
 /* --------------------------------------- Brand ------------------------------------------- */
+.brand-area{
+  margin-bottom: 5rem;
+}
+
+.link_hover__brand {
+  display: block;
+  opacity: .5;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.link_hover__brand:hover {
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+}
+
+.link_hover__brand img {
+  display: block;
+  max-height: 5.125rem;
+  margin: auto;
+}
 
 .react-multiple-carousel__arrow {
   background: transparent !important;
 }
+
 .react-multiple-carousel__arrow:hover {
   background: transparent !important;
 }
+
 .react-multiple-carousel__arrow--right {
-  right: calc(4% + 20px) !important;
+  right: calc(4% + 30px) !important;
 }
+
 .react-multiple-carousel__arrow::before {
   font-size: 13px !important;
   color: #000 !important;
   font-weight: 900;
 }
+
 .react-multiple-carousel__arrow--left {
-  left: calc(4% + 20px) !important;
+  left: calc(4% + 30px) !important;
 }
 
 .react-multi-carousel-list {
   position: inherit !important;
+}
+
+.react-multi-carousel-dot button {
+  margin-right: 10px !important;
+  border: 0 !important;
+  background-color: #bcbcbc !important;
+}
+.react-multi-carousel-dot--active button {
+  width: 3.87512rem !important;
+  background-color: #fed700 !important;
+  border-radius: 6.1875rem !important;
 }
 /* 
 

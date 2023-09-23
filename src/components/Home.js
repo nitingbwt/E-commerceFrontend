@@ -10,12 +10,12 @@ import BestSeller from './BestSeller';
 import Poster from './Poster';
 import RecentlyView from './RecentlyView';
 import OnsaleProduct from './OnsaleProduct';
-// import Login from './Login';
+import Header from './Header';
 
 const Home = () => {
   return (
     <>
-    {/* <Login /> */}
+    <Header />
     <Navbar />
     <HeroSlider />
     <ShopNow />
@@ -24,8 +24,8 @@ const Home = () => {
     <BestSeller />
     <Poster />
     <RecentlyView />
-    <OnsaleProduct />
     <Brand />
+    <OnsaleProduct />
     <Footer />
     </>
   )
