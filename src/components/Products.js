@@ -1,14 +1,93 @@
-import React from "react";
-import img1 from '../images/product/img1.jpg';
-import img2 from '../images/product/img2.jpg';
-import img3 from '../images/product/img3.jpg';
-import img4 from '../images/product/img4.jpg';
-import img5 from '../images/product/img5.jpg';
-import img6 from '../images/product/img6.jpg';
-import img7 from '../images/product/img7.jpg';
-import img8 from '../images/product/img8.jpg';
+import React, {useState} from "react";
+import FeaturedApi from "../API/FeaturedApi";
 
 const Products = () => {
+  const [featureData, setFetureData] = useState(FeaturedApi);
+
+  const featureProducts =
+    featureData.find((item) => item.feature[0].name === "Feature")
+      ?.feature[0].products || [];
+
+  const onSale =
+    featureData.find((item) => item.feature[0].name === "On Sale")
+      ?.feature[0].products || [];
+
+      const topRated =
+    featureData.find((item) => item.feature[0].name === "Top Rated")
+      ?.feature[0].products || [];
+
+      const renderProducts = (products) => {
+        return products.map((product) => {
+          const { id, img, title, heading, price } = product;
+          return (
+            <div className="col-6 col-wd-3 col-md-3 product_item p-0" key={id}>
+                  <div className="product_item__outer h-100">
+                    <div className="product_item__inner p-4">
+                      <div className="product_item__body pb-xl-2">
+                        <div className="mb-2 product_item__heading">
+                          <a
+                            href="../shop/product-categories-7-column-full-width.html"
+                            className="font-size-12 text-gray-5 mb-2"
+                          >
+                            {heading}
+                          </a>
+                          </div>
+                        <h5 className="mb-1 product_item__title">
+                          <a
+                            href="../shop/single-product-fullwidth.html"
+                            className="text-blue font-weight-bold"
+                          >
+                           {title}
+                          </a>
+                        </h5>
+                        <div className="mb-2">
+                          <a
+                            href="../shop/single-product-fullwidth.html"
+                            className="d-block text-center"
+                          >
+                            <img
+                              className="img-fluid"
+                             src={img}
+                              alt="Image Description"
+                            />
+                          </a>
+                        </div>
+                        <div className="d-flex justify-content-between align-items-center mb-1">
+                          <div className="product_price">
+                            <span>${price}</span>
+                          </div>
+                          <div className="d-none d-xl-block prodcut-add-cart">
+                            <a
+                              href="../shop/single-product-fullwidth.html"
+                              className="btn_add__cart"
+                            >
+                              <i className="fa-solid fa-cart-arrow-down"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="product_item__footer">
+                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                          <a
+                            href="../shop/compare.html"
+                          >
+                           <i className="fa-solid fa-code-compare"></i>{" "}
+                            Compare
+                          </a>
+                          <a
+                            href="../shop/wishlist.html"
+                          >
+                            <i className="fa-regular fa-heart"></i>{" "}
+                            Add to Wishlist
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          );
+        });
+      };
   return (
     <>
       <section className="product__section my-5">
@@ -65,270 +144,7 @@ const Products = () => {
               aria-labelledby="nav-home-tab"
             >
               <div className="row">
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img2}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img3}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img4}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {renderProducts(featureProducts)}
               </div>
             </div>
             <div
@@ -338,270 +154,7 @@ const Products = () => {
               aria-labelledby="nav-profile-tab"
             >
               <div className="row">
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {renderProducts(onSale)}
               </div>
             </div>
             <div
@@ -611,270 +164,7 @@ const Products = () => {
               aria-labelledby="nav-contact-tab"
             >
               <div className="row">
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-6 col-wd-3 col-md-3 product_item p-0">
-                  <div className="product_item__outer h-100">
-                    <div className="product_item__inner p-4">
-                      <div className="product_item__body pb-xl-2">
-                        <div className="mb-2 product_item__heading">
-                          <a
-                            href="../shop/product-categories-7-column-full-width.html"
-                            className="font-size-12 text-gray-5 mb-2"
-                          >
-                            Speakers
-                          </a>
-                          </div>
-                        <h5 className="mb-1 product_item__title">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="text-blue font-weight-bold"
-                          >
-                            Wireless Audio System Multiroom 360 degree Full base
-                            audio
-                          </a>
-                        </h5>
-                        <div className="mb-2">
-                          <a
-                            href="../shop/single-product-fullwidth.html"
-                            className="d-block text-center"
-                          >
-                            <img
-                              className="img-fluid"
-                              src={img1}
-                              alt="Image Description"
-                            />
-                          </a>
-                        </div>
-                        <div className="d-flex justify-content-between align-items-center mb-1">
-                          <div className="product_price">
-                            <span>$685,00</span>
-                          </div>
-                          <div className="d-none d-xl-block prodcut-add-cart">
-                            <a
-                              href="../shop/single-product-fullwidth.html"
-                              className="btn_add__cart"
-                            >
-                              <i className="fa-solid fa-cart-arrow-down"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product_item__footer">
-                        <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                          <a
-                            href="../shop/compare.html"
-                          >
-                           <i className="fa-solid fa-code-compare"></i>{" "}
-                            Compare
-                          </a>
-                          <a
-                            href="../shop/wishlist.html"
-                          >
-                            <i className="fa-regular fa-heart"></i>{" "}
-                            Add to Wishlist
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {renderProducts(topRated)}
               </div>
             </div>
           </div>

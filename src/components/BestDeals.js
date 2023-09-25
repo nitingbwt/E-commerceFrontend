@@ -15,33 +15,41 @@ const BestDeals = () => {
   const footwearProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "foot Wear")
       ?.bestDeal[0].products || [];
+
   const shirtsProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "shirt")
       ?.bestDeal[0].products || [];
+
       const homedecorProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "home decore")
       ?.bestDeal[0].products || [];
+
       const bagsProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "bags & legs")
       ?.bestDeal[0].products || [];
+
       const toysProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "toys")
       ?.bestDeal[0].products || [];
+
       const jewelleryProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "jewellery")
       ?.bestDeal[0].products || [];
+
       const diaperProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "diaper")
       ?.bestDeal[0].products || [];
+
       const bathskincareProducts =
     bestDelData.find((item) => item.bestDeal[0].name === "bath skin care")
       ?.bestDeal[0].products || [];
+      
 
   const renderProducts = (products) => {
     return products.map((product) => {
       const { id, img, title, heading, price } = product;
       return (
-        <div className="col-6 col-wd-3 col-md-6 product_item p-0" key={id}>
+        <div className="col-6 col-md-6 product_item p-0" key={id}>
         <div className="product_item__outer h-100">
           <div className="product_item__inner p-4 bg-white">
             <div className="product_item__body pb-xl-2">

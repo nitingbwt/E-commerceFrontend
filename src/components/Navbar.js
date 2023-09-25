@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-white">
