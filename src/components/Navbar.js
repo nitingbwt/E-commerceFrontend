@@ -56,8 +56,8 @@ const Navbar = () => {
                     </NavLink>
                   </li> */}
                   <li>
-                    <NavLink className="dropdown-item" to="/goldProduct">
-                      Gold Jewellery
+                    <NavLink className="dropdown-item" to="/product">
+                      product
                     </NavLink>
                   </li>
                   <li>

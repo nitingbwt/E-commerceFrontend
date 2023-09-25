@@ -8,7 +8,7 @@ import img6 from "../images/onsale/img6.jpg";
 import img7 from "../images/onsale/img7.jpg";
 import img8 from "../images/onsale/img8.jpg";
 import img9 from "../images/onsale/img9.jpg";
-import poster from "../images/poster.jpg";
+import poster from "../images/banner-01.jpg";
 
 
 const OnsaleProduct = () => {
@@ -163,7 +163,7 @@ const OnsaleProduct = () => {
                         </ul>
                     </div>
                     <div class="col-md-3 d-none d-md-block">
-                        <a href="../shop/shop.html" class="d-block"><img class="img-fluid" src={poster} alt="Image Description" /></a>
+                        <a href="#" class="d-block"><img class="img-fluid" src={poster} alt="Image Description" /></a>
                     </div>
                 </div>
             </div>

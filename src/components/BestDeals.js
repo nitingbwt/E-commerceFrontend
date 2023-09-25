@@ -61,7 +61,7 @@ const BestDeals = () => {
                   {title}
                 </a>
               </h5>
-              <div className="mb-2">
+              <div className="mb-2 p-4">
                 <a
                   href="../shop/single-product-fullwidth.html"
                   className="d-block text-center"
@@ -116,12 +116,12 @@ const BestDeals = () => {
             >
               <button
                 className="nav-link nav-classic active"
-                id="nav-beat-deal-tab"
+                id="foot-wear-tab"
                 data-bs-toggle="tab"
-                data-bs-target="#nav-beat-deal"
+                data-bs-target="#foot-wear"
                 type="button"
                 role="tab"
-                aria-controls="nav-beat-deal"
+                aria-controls="foot-wear"
                 aria-selected="true"
               >
                 Foot Wear
@@ -215,149 +215,6 @@ const BestDeals = () => {
           <div className="tab-content" id="nav-tabContent">
             <div
               className="tab-pane fade show active"
-              id="nav-beat-deal"
-              role="tabpanel"
-              aria-labelledby="nav-beat-deal-tab"
-            >
-              <div className="row">
-                <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
-                  <div className="row">
-                  {renderProducts(footwearProducts)}
-                  </div>
-                </div>
-                <div className="col-md-4 col-wd-4 products-group-1">
-                  <div className="row">
-                    <div className="col product_item p-0 h-100">
-                      <div className="product_item__outer h-100">
-                        <div className="product_item__inner p-4 bg-white">
-                          <div className="product_item__body pb-xl-2">
-                            <div className="mb-2 product_item__heading">
-                              <a
-                                href="#"
-                                className="font-size-12 text-gray-5 mb-2"
-                              >
-                                Speakers
-                              </a>
-                            </div>
-                            <h5 className="mb-1 product_item__title">
-                              <a
-                                href="../shop/single-product-fullwidth.html"
-                                className="text-blue font-weight-bold"
-                              >
-                                Wireless Audio System Multiroom 360 degree Full
-                                base audio
-                              </a>
-                            </h5>
-                            <div className="mb-5">
-                              <a
-                                href="#"
-                                className="d-block text-center"
-                              >
-                                <img
-                                  className="img-fluid"
-                                  src={img5}
-                                  alt="Image Description"
-                                />
-                              </a>
-                            </div>
-                            <div className="row mb-5">
-                              <div className="col-auto">
-                                <a
-                                  className="u_media__viewer"
-                                  href="#"
-                                >
-                                  <img
-                                    className="img-fluid border"
-                                    src={img6}
-                                    alt="Image Description"
-                                  />
-
-                                  <span className="u_media__viewer___container">
-                                    <span className="u_media__viewer___icon">
-                                      <span className="fas fa-plus u_media__viewer___icon-inner"></span>
-                                    </span>
-                                  </span>
-                                </a>
-                              </div>
-
-                              <div className="col-auto">
-                                <a
-                                  className="u_media__viewer"
-                                  href="#"
-                                >
-                                  <img
-                                    className="img-fluid border"
-                                    src={img7}
-                                    alt="Image Description"
-                                  />
-
-                                  <span className="u_media__viewer___container">
-                                    <span className="u_media__viewer___icon">
-                                      <span className="fas fa-plus u_media__viewer___icon-inner"></span>
-                                    </span>
-                                  </span>
-                                </a>
-                              </div>
-
-                              <div className="col-auto">
-                                <a
-                                  className="u_media__viewer"
-                                  href="#"
-                                >
-                                  <img
-                                    className="img-fluid border"
-                                    src={img8}
-                                    alt="Image Description"
-                                  />
-
-                                  <span className="u_media__viewer___container">
-                                    <span className="u_media__viewer___icon">
-                                      <span className="fas fa-plus u_media__viewer___icon-inner"></span>
-                                    </span>
-                                  </span>
-                                </a>
-                              </div>
-                              <div className="col"></div>
-                            </div>
-                            <div className="d-flex justify-content-between align-items-center mb-1">
-                              <div className="product_price">
-                                <span>$685,00</span>
-                              </div>
-                              <div className="d-none d-xl-block prodcut-add-cart">
-                                <a
-                                  href="#"
-                                  className="btn_add__cart"
-                                >
-                                  <i className="fa-solid fa-cart-arrow-down"></i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="product_item__footer">
-                            <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                              <a href="../shop/compare.html">
-                                <i className="fa-solid fa-code-compare"></i> Compare
-                              </a>
-                              <a href="../shop/wishlist.html">
-                                <i className="fa-regular fa-heart"></i> Add to
-                                Wishlist
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
-                  <div className="row">
-                  {renderProducts(footwearProducts)}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="tab-pane fade"
               id="nav-foot-wear"
               role="tabpanel"
               aria-labelledby="nav-foot-wear-tab"
@@ -365,7 +222,7 @@ const BestDeals = () => {
               <div className="row">
                 <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
                   <div className="row">
-                  {renderProducts(shirtsProducts)}
+                  {renderProducts(footwearProducts)}
                   </div>
                 </div>
                 <div className="col-md-4 col-wd-4 products-group-1">
@@ -494,7 +351,7 @@ const BestDeals = () => {
                 </div>
                 <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
                   <div className="row">
-                  {renderProducts(shirtsProducts)}
+                  {renderProducts(footwearProducts)}
                   </div>
                 </div>
               </div>
@@ -504,6 +361,149 @@ const BestDeals = () => {
               id="nav-shirt"
               role="tabpanel"
               aria-labelledby="nav-shirt-tab"
+            >
+              <div className="row">
+                <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
+                  <div className="row">
+                  {renderProducts(shirtsProducts)}
+                  </div>
+                </div>
+                <div className="col-md-4 col-wd-4 products-group-1">
+                  <div className="row">
+                    <div className="col product_item p-0 h-100">
+                      <div className="product_item__outer h-100">
+                        <div className="product_item__inner p-4 bg-white">
+                          <div className="product_item__body pb-xl-2">
+                            <div className="mb-2 product_item__heading">
+                              <a
+                                href="#"
+                                className="font-size-12 text-gray-5 mb-2"
+                              >
+                                Speakers
+                              </a>
+                            </div>
+                            <h5 className="mb-1 product_item__title">
+                              <a
+                                href="../shop/single-product-fullwidth.html"
+                                className="text-blue font-weight-bold"
+                              >
+                                Wireless Audio System Multiroom 360 degree Full
+                                base audio
+                              </a>
+                            </h5>
+                            <div className="mb-5">
+                              <a
+                                href="#"
+                                className="d-block text-center"
+                              >
+                                <img
+                                  className="img-fluid"
+                                  src={img5}
+                                  alt="Image Description"
+                                />
+                              </a>
+                            </div>
+                            <div className="row mb-5">
+                              <div className="col-auto">
+                                <a
+                                  className="u_media__viewer"
+                                  href="#"
+                                >
+                                  <img
+                                    className="img-fluid border"
+                                    src={img6}
+                                    alt="Image Description"
+                                  />
+
+                                  <span className="u_media__viewer___container">
+                                    <span className="u_media__viewer___icon">
+                                      <span className="fas fa-plus u_media__viewer___icon-inner"></span>
+                                    </span>
+                                  </span>
+                                </a>
+                              </div>
+
+                              <div className="col-auto">
+                                <a
+                                  className="u_media__viewer"
+                                  href="#"
+                                >
+                                  <img
+                                    className="img-fluid border"
+                                    src={img7}
+                                    alt="Image Description"
+                                  />
+
+                                  <span className="u_media__viewer___container">
+                                    <span className="u_media__viewer___icon">
+                                      <span className="fas fa-plus u_media__viewer___icon-inner"></span>
+                                    </span>
+                                  </span>
+                                </a>
+                              </div>
+
+                              <div className="col-auto">
+                                <a
+                                  className="u_media__viewer"
+                                  href="#"
+                                >
+                                  <img
+                                    className="img-fluid border"
+                                    src={img8}
+                                    alt="Image Description"
+                                  />
+
+                                  <span className="u_media__viewer___container">
+                                    <span className="u_media__viewer___icon">
+                                      <span className="fas fa-plus u_media__viewer___icon-inner"></span>
+                                    </span>
+                                  </span>
+                                </a>
+                              </div>
+                              <div className="col"></div>
+                            </div>
+                            <div className="d-flex justify-content-between align-items-center mb-1">
+                              <div className="product_price">
+                                <span>$685,00</span>
+                              </div>
+                              <div className="d-none d-xl-block prodcut-add-cart">
+                                <a
+                                  href="#"
+                                  className="btn_add__cart"
+                                >
+                                  <i className="fa-solid fa-cart-arrow-down"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="product_item__footer">
+                            <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                              <a href="../shop/compare.html">
+                                <i className="fa-solid fa-code-compare"></i> Compare
+                              </a>
+                              <a href="../shop/wishlist.html">
+                                <i className="fa-regular fa-heart"></i> Add to
+                                Wishlist
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
+                  <div className="row">
+                  {renderProducts(shirtsProducts)}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="nav-home-decor"
+              role="tabpanel"
+              aria-labelledby="nav-home-decor-tab"
             >
               <div className="row">
                 <div className="col-md-4 col-wd-4 d-md-flex d-wd-block">
