@@ -38,11 +38,9 @@ const RecentlyView = () => {
             </div>
             <Carousel
               responsive={responsive}
-              // infinite={true}
-              // autoPlay={props.deviceType !== "mobile" ? true : false}
-              // autoPlaySpeed={2000}
               removeArrowOnDeviceType={["tablet", "mobile"]}
               itemClass="pb-5"
+              showDots={true}
             >
               <div className="product_item">
                 <div className="product_item__outer h-100">
