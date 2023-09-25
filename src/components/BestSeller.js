@@ -6,20 +6,25 @@ import { NavLink } from "react-router-dom";
 const BestSeller = () => {
   const [bestsellerData, setBestsellerData] = useState(BestsellerApi);
   const x = [];
+
   const bestSeller =
     bestsellerData.find((item) => item.bestseller[0].name === "Top20")
       ?.bestseller[0].products || [];
   console.log("bestsellerrrrrrrrr", bestSeller)
 
 
-  const onSale =
-    bestsellerData.find((item) => item.bestseller[0].name === "On Sale")
+  const fashion =
+    bestsellerData.find((item) => item.bestseller[0].name === "Fashion")
       ?.bestseller[0].products || [];
   // console.log("onsaleeee", onSale)
 
-  const topRated =
-    bestsellerData.find((item) => item.bestseller[0].name === "Top Rated")
+  const electronics =
+    bestsellerData.find((item) => item.bestseller[0].name === "Electronics")
       ?.bestseller[0].products || [];
+
+      const accessories =
+      bestsellerData.find((item) => item.bestseller[0].name === "Accessories")
+        ?.bestseller[0].products || [];
 
   const responsive = {
     superLargeDesktop: {
@@ -150,31 +155,45 @@ const BestSeller = () => {
                 <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
-                    id="phonetap-tab"
+                    id="fashion-tab"
                     data-bs-toggle="tab"
-                    data-bs-target="#phonetap"
+                    data-bs-target="#fashion"
                     type="button"
                     role="tab"
-                    aria-controls="phonetap"
+                    aria-controls="fashion"
                     aria-selected="false"
                   >
-                    Phones & Tablets
+                    Fashion
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
                   <button
                     className="nav-link"
-                    id="laptopcomputer-tab"
+                    id="electronics-tab"
                     data-bs-toggle="tab"
-                    data-bs-target="#laptopcomputer"
+                    data-bs-target="#electronics"
                     type="button"
                     role="tab"
-                    aria-controls="laptopcomputer"
+                    aria-controls="electronics"
                     aria-selected="false"
                   >
-                    Laptops & Computers
+                  Electronics
                   </button>
                 </li>
+                <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="accessories-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#accessories"
+                  type="button"
+                  role="tab"
+                  aria-controls="accessories"
+                  aria-selected="false"
+                >
+                Accessories
+                </button>
+              </li>
               </ul>
             </div>
             <div className="tab-content" id="myTabContent">
@@ -206,28 +225,43 @@ const BestSeller = () => {
               </div>
               <div
                 className="tab-pane fade"
-                id="phonetap"
+                id="fashion"
                 role="tabpanel"
-                aria-labelledby="phonetap-tab"
+                aria-labelledby="fashion-tab"
               >
                 <div className="best_seller__item mx-5">
                   <ul className="row list-unstyled no-gutters mb-0 overflow-visible">
-                    {renderProducts(onSale)}
+                    {renderProducts(fashion)}
                   </ul>
                 </div>
               </div>
+
+             <div
+                className="tab-pane fade"
+                id="electronics"
+                role="tabpanel"
+                aria-labelledby="electronics-tab"
+              >
+                <div className="best_seller__item mx-5">
+                  <ul className="row list-unstyled no-gutters mb-0 overflow-visible">
+                    {renderProducts(electronics)}
+                  </ul>
+                </div>
+              </div>
+
               <div
                 className="tab-pane fade"
-                id="laptopcomputer"
+                id="accessories"
                 role="tabpanel"
-                aria-labelledby="laptopcomputer-tab"
+                aria-labelledby="accessories-tab"
               >
                 <div className="best_seller__item mx-5">
                   <ul className="row list-unstyled no-gutters mb-0 overflow-visible">
-                    {renderProducts(topRated)}
+                    {renderProducts(accessories)}
                   </ul>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>

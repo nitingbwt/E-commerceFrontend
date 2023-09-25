@@ -310,6 +310,12 @@ li {
     transform: translateY(0);
   }
 }
+.top-menu{
+  font-size: 2.5rem;
+}
+.top-menu:focus{
+ border: none !important;
+}
 
 
 /* --------------------------------------------------------- Hero Silder --------------------------------------------------------- */

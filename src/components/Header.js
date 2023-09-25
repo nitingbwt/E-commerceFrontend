@@ -38,10 +38,12 @@ const Header = () => {
               </NavLink>
             </div>
             <div className="col-lg-1 col-6 order-1 order-lg-1">
-            <nav className="navbar">
+            <nav className="navbar" style={{boxShadow: "0 0px 0px rgba(0, 0, 0, 0)"}}>
             <div>
               <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon">
+                <i className="fa fa-bars top-menu"></i>
+                </span>
               </button>
               <div className="offcanvas offcanvas-start first-offcanva" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="offcanvas-header">
