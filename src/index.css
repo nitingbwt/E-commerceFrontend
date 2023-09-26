@@ -254,70 +254,6 @@ li {
   background-color: #f2ba59;
 }
 
-.first-toggler-btn{
-  border: none;
-  border-left: 2px solid #fed700;
-}
-.first-toggler-btn li a{
- color: #828383;
- transition:  ease all 0.5s;
-}
-.first-toggler-btn li a:hover{
-  color: #141414;
-  background-color: white !important;
-  transition:  ease all 0.5s;
- }
- .first-offcanva{
-  max-width: 30rem !important;
-
- }
- .first-offcanvabody{
- max-height: 400px !important;
- padding-left: 30px;
- }
- .offcanva-close{
-  font-size: 1.8rem !important;
- }
- .first-offcanvabody::-webkit-scrollbar{
-  width: 5px !important;
- }
-
-.first-offcanvabody:hover::-webkit-scrollbar-thumb {
-  background: #adabab; 
-}
-.first-offcanvabody li a{
-  line-height: 1.5rem !important;
-}
-.dropdown-toggle::after {
- position: absolute !important;
- right: 0 !important;
-}
-.side-image{
-  width: 100% !important;
-}
-.slide-down {
-  display: block !important;
-  animation: slideDown 0.3s ease-out forwards;
-}
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.top-menu{
-  font-size: 2.5rem;
-}
-.top-menu:focus{
- border: none !important;
-}
-
-
 /* --------------------------------------------------------- Hero Silder --------------------------------------------------------- */
 
 .hero_silder__section {
@@ -672,7 +608,7 @@ sup {
 }
 
 .best_seller__item{
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 5.5rem;
 }
 
@@ -1237,6 +1173,9 @@ background-size: cover;
 }
 
 
+/* ------------------------------------------- Product Page ------------------------------------- */
+
+
 .breadcrumb {
   padding: 0.62rem 0;
   margin-bottom: 0.5rem;
@@ -1280,3 +1219,4 @@ background-size: cover;
   font-size: 0.875rem;
   color: #333e48;
 }
+

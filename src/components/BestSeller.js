@@ -10,8 +10,6 @@ const BestSeller = () => {
   const bestSeller =
     bestsellerData.find((item) => item.bestseller[0].name === "Top20")
       ?.bestseller[0].products || [];
-  console.log("bestsellerrrrrrrrr", bestSeller)
-
 
   const fashion =
     bestsellerData.find((item) => item.bestseller[0].name === "Fashion")
@@ -22,9 +20,9 @@ const BestSeller = () => {
     bestsellerData.find((item) => item.bestseller[0].name === "Electronics")
       ?.bestseller[0].products || [];
 
-      const accessories =
-      bestsellerData.find((item) => item.bestseller[0].name === "Accessories")
-        ?.bestseller[0].products || [];
+  const accessories =
+    bestsellerData.find((item) => item.bestseller[0].name === "Accessories")
+      ?.bestseller[0].products || [];
 
   const responsive = {
     superLargeDesktop: {
@@ -46,84 +44,101 @@ const BestSeller = () => {
     },
   };
 
-  const renderProducts = (products) => {
-    return products.map((product) => {
-      const { id, img, title, heading, price } = product;
-      return (
-        <li className="col-wd-3 col-md-3 product_item" key={id}>
-          <div className="product_item__outer h-100">
-            <div className="product_item__inner p-md-4 row no-gutters">
-              <div className="col col-lg-auto product-media-left p-0">
-                <a
-                  href="../shop/single-product-fullwidth.html"
-                  className="max-width-150 d-block"
-                  tabindex="0"
-                >
+  // Function to chunk an array
+  const chunkArray = (myArray, chunk_size) => {
+    let index = 0;
+    let arrayLength = myArray.length;
+    let tempArray = [];
 
-                  <img
-                    className="img-fluid"
-                    style={{ height: "120px" }}
-                    src={img}
-                    alt="Image Description"
-                  />
-                </a>
-              </div>
-              <div className="col product_item__body">
-                <div className="mb-3">
-                  <div className="mb-2 product_item__heading">
-                    <a
-                      href="../shop/product-categories-7-column-full-width.html"
-                      className="font-size-12 text-gray-5"
-                      tabindex="0"
-                    >
-                      {heading}
-                    </a>
-                  </div>
-                  <h5 className="product_item__title">
-                    <a
-                      href="../shop/single-product-fullwidth.html"
-                      className="text-blue font-weight-bold"
-                      tabindex="0"
-                    >
-                      {title}
-                    </a>
-                  </h5>
-                </div>
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                  <div className="product_price">
-                    <span>$ {price}</span>
-                  </div>
-                  <div className="d-none d-xl-block prodcut-add-cart">
-                    <a
-                      href="../shop/single-product-fullwidth.html"
-                      className=" btn_add__cart"
-                      tabindex="0"
-                    >
-                      <i className="fa-solid fa-cart-arrow-down"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="product_item__footer">
-                  <div className="border-top pt-3 d-flex justify-content-between align-items-center">
-                    <a href="../shop/compare.html">
-                      <i className="fa-solid fa-code-compare"></i>{" "}
-                      Compare
-                    </a>
-                    <a href="../shop/wishlist.html">
-                      <i className="fa-regular fa-heart"></i>{" "}
-                      Wishlist
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      );
-    });
+    for (index = 0; index < arrayLength; index += chunk_size) {
+      let chunk = myArray.slice(index, index + chunk_size);
+      tempArray.push(chunk);
+    }
+
+    return tempArray;
   };
-  x.push(renderProducts(bestSeller));
-  console.log("xxxxxxxxx", x)
+
+  // Chunk bestSeller array into segments of 8
+  const productChunks = chunkArray(bestSeller, 8);
+
+  const renderProducts = (products) => {
+    return (
+      <ul className="row">
+        {products.map((product) => {
+          const { id, img, title, heading, price } = product;
+          return (
+            <li className="col-wd-3 col-md-3 product_item" key={id}>
+              <div className="product_item__outer h-100">
+                <div className="product_item__inner p-md-4 row no-gutters">
+                  <div className="col col-lg-auto product-media-left p-0">
+                    <a
+                      href="../shop/single-product-fullwidth.html"
+                      className="max-width-150 d-block"
+                      tabindex="0"
+                    >
+                      <img
+                        className="img-fluid"
+                        style={{ height: "120px" }}
+                        src={img}
+                        alt="Image Description"
+                      />
+                    </a>
+                  </div>
+                  <div className="col product_item__body">
+                    <div className="mb-3">
+                      <div className="mb-2 product_item__heading">
+                        <a
+                          href="../shop/product-categories-7-column-full-width.html"
+                          className="font-size-12 text-gray-5"
+                          tabindex="0"
+                        >
+                          {heading}
+                        </a>
+                      </div>
+                      <h5 className="product_item__title">
+                        <a
+                          href="../shop/single-product-fullwidth.html"
+                          className="text-blue font-weight-bold"
+                          tabindex="0"
+                        >
+                          {title}
+                        </a>
+                      </h5>
+                    </div>
+                    <div className="d-flex justify-content-between align-items-center mb-4">
+                      <div className="product_price">
+                        <span>$ {price}</span>
+                      </div>
+                      <div className="d-none d-xl-block prodcut-add-cart">
+                        <a
+                          href="../shop/single-product-fullwidth.html"
+                          className=" btn_add__cart"
+                          tabindex="0"
+                        >
+                          <i className="fa-solid fa-cart-arrow-down"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="product_item__footer">
+                      <div className="border-top pt-3 d-flex justify-content-between align-items-center">
+                        <a href="../shop/compare.html">
+                          <i className="fa-solid fa-code-compare"></i> Compare
+                        </a>
+                        <a href="../shop/wishlist.html">
+                          <i className="fa-regular fa-heart"></i> Wishlist
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
+
   return (
     <>
       <section className="best_seller__section">
@@ -134,7 +149,7 @@ const BestSeller = () => {
                 Bestsellers
               </h3>
               <ul
-                className="nav nav-tabs justify-content-end seller_nav__link"
+                className="nav nav-tabs justify-content-end seller_nav__link border-0"
                 id="myTab"
                 role="tablist"
               >
@@ -177,23 +192,23 @@ const BestSeller = () => {
                     aria-controls="electronics"
                     aria-selected="false"
                   >
-                  Electronics
+                    Electronics
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="accessories-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#accessories"
-                  type="button"
-                  role="tab"
-                  aria-controls="accessories"
-                  aria-selected="false"
-                >
-                Accessories
-                </button>
-              </li>
+                  <button
+                    className="nav-link"
+                    id="accessories-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#accessories"
+                    type="button"
+                    role="tab"
+                    aria-controls="accessories"
+                    aria-selected="false"
+                  >
+                    Accessories
+                  </button>
+                </li>
               </ul>
             </div>
             <div className="tab-content" id="myTabContent">
@@ -202,27 +217,19 @@ const BestSeller = () => {
                 id="top20"
                 role="tabpanel"
                 aria-labelledby="top20-tab"
-                style={{
-                  // paddingBottom: '1rem',
-                  position: 'relative'
-                }}
+                style={{ position: "relative" }}
               >
-
-                
-                {x.map((el) => {
-                  return (
-                    <>
-                      <Carousel
-                        responsive={responsive}
-                        showDots={true}
-                        removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-                      ><div><ul className="row">{el}</ul></div></Carousel>
-                    </>
-                  )
-                })}
-
-
+                <Carousel
+                  responsive={responsive}
+                  showDots={true}
+                  removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+                >
+                  {productChunks.map((chunk, idx) => (
+                    <div className="best_seller__item mx-5" key={idx}>{renderProducts(chunk)}</div>
+                  ))}
+                </Carousel>
               </div>
+
               <div
                 className="tab-pane fade"
                 id="fashion"
@@ -236,7 +243,7 @@ const BestSeller = () => {
                 </div>
               </div>
 
-             <div
+              <div
                 className="tab-pane fade"
                 id="electronics"
                 role="tabpanel"
@@ -261,7 +268,6 @@ const BestSeller = () => {
                   </ul>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>

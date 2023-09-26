@@ -114,6 +114,70 @@ const BestsellerApi = [
                 heading: "foot wear",
                 price: "685",
               },
+              {
+                id: 9,
+                img: top201,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 10,
+                img: top202,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id:11,
+                img: top203,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 12,
+                img: top204,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 13,
+                img: top205,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 14,
+                img: top206,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 15,
+                img: top207,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 16,
+                img: top208,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
               
         ],
       },

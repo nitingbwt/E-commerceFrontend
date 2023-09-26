@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import img1 from "../images/product/img1.jpg";
+import img1 from "../images/c1-01.jpg";
 import img2 from "../images/product/img2.jpg";
 import img3 from "../images/product/img3.jpg";
 import img4 from "../images/product/img4.jpg";

@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import img1 from "../images/Brand/img1.png";
-import img2 from "../images/Brand/img2.png";
-import img3 from "../images/Brand/img3.png";
-import img4 from "../images/Brand/img4.png";
-import img5 from "../images/Brand/img5.png";
-import img6 from "../images/Brand/img6.png";
+import BrandApi from "../API/BrandApi";
 import { NavLink } from "react-router-dom";
 
 const Brand = (props) => {
+  const [brandData, setBrandData] = useState(BrandApi);
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -39,49 +35,20 @@ const Brand = (props) => {
               // infinite={true}
               // autoPlay={props.deviceType !== "mobile" ? true : false}
               // autoPlaySpeed={2000}
-              showDots={true}
+              // showDots={true}
               removeArrowOnDeviceType={["tablet", "mobile"]}
             >
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img1} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img2} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img3} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img4} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img5} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img6} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img1} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
-              <div className="brand-item py-4">
-                <NavLink href="#" tabindex="-1" className="link_hover__brand">
-                  <img src={img2} alt="brand image" className="img-fluid" />
-                </NavLink>
-              </div>
+              {brandData.map((brand) => (
+                <div className="brand-item py-4" key={brand.id}>
+                  <NavLink href="#" tabindex="-1" className="link_hover__brand">
+                    <img
+                      src={brand.img}
+                      alt="brand image"
+                      className="img-fluid"
+                    />
+                  </NavLink>
+                </div>
+              ))}
             </Carousel>
           </div>
         </div>
