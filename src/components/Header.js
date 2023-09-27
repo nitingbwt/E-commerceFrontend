@@ -48,7 +48,7 @@ const Header = () => {
               <div className="offcanvas offcanvas-start first-offcanva" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="offcanvas-header">
                 <NavLink to="/">
-                <img src={Logo} height={40} style={{paddingLeft:'2rem'}} />
+                <img src={Logo} height={60} style={{paddingLeft:'2rem'}} />
               </NavLink>
                   <button type="button" className="btn-close offcanva-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
@@ -190,8 +190,9 @@ const Header = () => {
                     </ul>
                     </li>
                   </ul>
-                </div>
-                <img src={sidefooter} className=" side-image" alt="" />
+                  
+                  </div>
+                  <img src={sidefooter} className="side-image" alt="" />
               </div>
             </div>
               </nav>

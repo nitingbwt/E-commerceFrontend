@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../images/Logo.png";
+import tab from "../images/electronics/tab1-01.jpg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,6 +33,250 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          
+          
+          <li class="side-menu-dropdown">
+          <a href="# " className="departament"><i className="fa fa-bars" style={{fontSize:"20px"}}></i>&emsp;<b>All Departments</b></a>
+          <ul class="project">
+            
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Computers & Accessories</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+
+
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Cameras, Audio & Video</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+
+
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Mobiles & Tablets</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+
+
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Movies, Music & Video Game</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+
+
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">TV & Audio</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+
+
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Watches & Eyewear</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+
+
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Car, Motorbike & Industrial</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+           
+            
+            <li class="drop-item d-flex justify-content-between align-items-center"><a href="">Accessories</a><i className="fa fa-angle-right side2ndmenu-arrow"></i>
+            <div className="sidetoside-container py-5">
+          <div className="row">
+          <div className="col-6">
+          <p><b>Computers & Accessories</b></p>
+          <p className="sidetoside-list">All Computers & Accessories</p>
+          <p className="sidetoside-list">Laptops, Desktops & Monitors</p>
+          <p className="sidetoside-list">Printers & Ink</p>
+          <p className="sidetoside-list">Networking & Internet Devices</p>
+          <p className="sidetoside-list">Computer Accessories</p>
+          <p className="sidetoside-list">Software</p>
+          <div className="">
+          <hr />
+          <p className="sidetoside-list">All Electronics</p>
+          <h6 style={{
+            marginTop:"-10px"
+          }}>Discover more products</h6>
+          <img  src={logo} height={30} alt="" />
+          </div>
+          </div>
+          <div className="col-6">
+          <b>Office & Stationery</b>
+          <p className="sidetoside-list">All Office & Stationery</p>
+           <img src={tab} className="img-fluid" alt="" />
+          </div>
+          </div>
+            </div></li>
+            
+            
+              
+          </ul>
+        </li>
+
+
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav text-center me-auto mb-2 mb-lg-0">
               <li className="nav-item">
