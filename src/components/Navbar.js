@@ -11,7 +11,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white" id="second-navbar">
         <div className="container">
           {/* <a to="#">Navbar</a> */}
           <NavLink className="navbar-brand" to="/">
@@ -291,7 +291,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle2"
                   id="navbarDropdown"
                   role="button"
                   data-bs-toggle="dropdown"

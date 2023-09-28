@@ -1,18 +1,23 @@
-import top201 from "../images/22sep best seller/beauty product1-01.jpg";
-import top202 from "../images/22sep best seller/bottle1-01.jpg";
-import top203 from "../images/22sep best seller/camera1-01.jpg";
-import top204 from "../images/22sep best seller/casual shoes 1-01.jpg";
-import top205 from "../images/22sep best seller/chair1-01.jpg";
-import top206 from "../images/22sep best seller/glasses1-01.jpg";
-import top207 from "../images/22sep best seller/men garment1-01.jpg";
-import top208 from "../images/22sep best seller/moble cover1-01.jpg";
-import top209 from "../images/22sep best seller/speaker1-01.jpg";
-import top2010 from "../images/22sep best seller/spices1-01.jpg";
-import top2011 from "../images/22sep best seller/sports shoes1-01.jpg";
-import top2012 from "../images/22sep best seller/watch 1-01.jpg";
-import top2013 from "../images/22sep best seller/women garment1-01.jpg";
-import top2014 from "../images/22sep best seller/beauty product4-01.jpg";
-import top2015 from "../images/22sep best seller/spices3-01.jpg";
+import top201 from "../images/21sep/21sep/bottle-01.jpg";
+import top202 from "../images/21sep/21sep/camera-01.jpg";
+import top203 from "../images/21sep/21sep/casual shoes-01.jpg";
+import top204 from "../images/21sep/21sep/chair-01.jpg";
+import top205 from "../images/21sep/21sep/compact powder-01.jpg";
+import top206 from "../images/21sep/21sep/glasses-01.jpg";
+import top207 from "../images/21sep/21sep/headphone-01.jpg";
+import top208 from "../images/21sep/21sep/lipstick-01.jpg";
+import top209 from "../images/21sep/21sep/mens garment-01.jpg";
+import top2010 from "../images/21sep/21sep/mobile cover-01.jpg";
+import top2011 from "../images/21sep/21sep/notepad with pen-01.jpg";
+import top2012 from "../images/21sep/21sep/pendrive-01.jpg";
+import top2013 from "../images/21sep/21sep/red chilli-01.jpg";
+import top2014 from "../images/21sep/21sep/speaker2-01.jpg";
+import top2015 from "../images/21sep/21sep/sports shoes-01.jpg";
+import top2016 from "../images/21sep/21sep/ssd-01.jpg";
+import top2017 from "../images/21sep/21sep/tab-01.jpg";
+import top2018 from "../images/21sep/21sep/turmeric powder-01.jpg";
+import top2019 from "../images/21sep/21sep/watch2-01.jpg";
+import top2020 from "../images/21sep/21sep/womens garment-01.jpg";
 import fashion1 from '../images/fashion & accessories/new/bag backview-01.jpg';
 import fashion2 from '../images/fashion & accessories/new/tshirt frontview-01.jpg';
 import fashion3 from '../images/fashion & accessories/new/shirt frontview-01.jpg';
@@ -116,7 +121,7 @@ const BestsellerApi = [
               },
               {
                 id: 9,
-                img: top201,
+                img: top209,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -124,7 +129,7 @@ const BestsellerApi = [
               },
               {
                 id: 10,
-                img: top202,
+                img: top2010,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -132,7 +137,7 @@ const BestsellerApi = [
               },
               {
                 id:11,
-                img: top203,
+                img: top2011,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -140,7 +145,7 @@ const BestsellerApi = [
               },
               {
                 id: 12,
-                img: top204,
+                img: top2012,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -148,7 +153,7 @@ const BestsellerApi = [
               },
               {
                 id: 13,
-                img: top205,
+                img: top2013,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -156,7 +161,7 @@ const BestsellerApi = [
               },
               {
                 id: 14,
-                img: top206,
+                img: top2014,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -164,7 +169,7 @@ const BestsellerApi = [
               },
               {
                 id: 15,
-                img: top207,
+                img: top2015,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",
@@ -172,7 +177,39 @@ const BestsellerApi = [
               },
               {
                 id: 16,
-                img: top208,
+                img: top2016,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 17,
+                img: top2017,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 18,
+                img: top2018,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 19,
+                img: top2019,
+                title:
+                  "cHURRICANE Running Shoes For Men  (Blue)",
+                heading: "foot wear",
+                price: "685",
+              },
+              {
+                id: 20,
+                img: top2020,
                 title:
                   "cHURRICANE Running Shoes For Men  (Blue)",
                 heading: "foot wear",

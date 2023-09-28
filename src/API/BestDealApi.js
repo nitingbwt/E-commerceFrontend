@@ -70,6 +70,7 @@ const BestDealApi = [
                 heading: "foot wear",
                 price: "685",
               },
+              
         ],
       },
     ],

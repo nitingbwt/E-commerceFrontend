@@ -29,15 +29,16 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className="herader-section py-5">
+      <section className="herader-section py-5 ">
         <div className="container">
-          <div className="row align-items-center">
-          <div className="col-lg-2 col-6 order-1 order-lg-1">
+          <div className="row align-items-center d-flex justify-content-center align-items-center">
+         
+          <div className="col-lg-2 col-sm-3 col-md-1 col-5 order-lg-0 order-1">
               <NavLink to="/">
-                <img src={Logo} height={40} />
+                <img src={Logo} height={40} className="headrer-logo" />
               </NavLink>
             </div>
-            <div className="col-lg-1 col-6 order-1 order-lg-1">
+            <div className="col-lg-1 col-sm-1 col-md-1 col-1 order-0 order-lg-1">
             <nav className="navbar" style={{boxShadow: "0 0px 0px rgba(0, 0, 0, 0)"}}>
             <div>
               <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -197,7 +198,7 @@ const Header = () => {
             </div>
               </nav>
             </div>
-            <div className="col-lg-6 col-12 order-3 order-lg-2">
+            <div className="col-lg-6 col-12 order-3 order-lg-2 ">
               <form className="Search-box">
                 <input
                   className="form-control me-2"
@@ -210,7 +211,7 @@ const Header = () => {
                 </button>
               </form>
             </div>
-            <div className="col-lg-3 col-6 order-2 order-lg-3 header-icons">
+            <div className="col-lg-3 col-5 order-2 order-lg-3 header-icons ">
               <div className="form-sociallogin  justify-content-end align-items-center mt-0">
                 <ul>
                   <li>
@@ -229,7 +230,7 @@ const Header = () => {
                       <span>2</span>
                     </NavLink>
                   </li>
-                  <li>
+                  <li className="dolar">
                     <p>$1785.00</p>
                   </li>
                 </ul>

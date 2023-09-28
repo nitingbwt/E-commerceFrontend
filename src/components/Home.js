@@ -11,6 +11,7 @@ import Poster from './Poster';
 import RecentlyView from './RecentlyView';
 import OnsaleProduct from './OnsaleProduct';
 import Header from './Header';
+import Testshimpi from './Testshimpi';
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
     <RecentlyView />
     <Brand />
     <OnsaleProduct />
+    <Testshimpi/>
     <Footer />
     </>
   )

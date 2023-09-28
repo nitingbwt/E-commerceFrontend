@@ -126,10 +126,10 @@ const BestDeals = () => {
                 className="nav-link nav-classic active"
                 id="foot-wear-tab"
                 data-bs-toggle="tab"
-                data-bs-target="#foot-wear"
+                data-bs-target="#nav-foot-wear"
                 type="button"
                 role="tab"
-                aria-controls="foot-wear"
+                aria-controls="nav-foot-wear"
                 aria-selected="true"
               >
                 Foot Wear
