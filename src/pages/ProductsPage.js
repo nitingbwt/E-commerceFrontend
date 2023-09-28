@@ -6,7 +6,12 @@ import ProductApi from "../API/ProductApi";
 import Brand from "../components/Brand";
 import OnsaleProduct from "../components/OnsaleProduct";
 import banner1 from "../images/product/banner-1.jpg";
-import banner2 from "../images/product/banner-2.jpg";
+// import banner2 from "../images/product/.jpg";
+import latestImg1 from "../images/product/a1.jpg";
+import latestImg2 from "../images/product/headphone.jpg";
+import latestImg3 from "../images/product/watch.jpg";
+import latestImg4 from "../images/product/apple tab 1.jpg";
+import latestImg5 from "../images/product/img2.jpg";
 
 const ProductsPage = () => {
   const [productData, setProductData] = useState(ProductApi);
@@ -223,39 +228,30 @@ const ProductsPage = () => {
               <ul class="list-unstyled">
                 <li class="mb-4">
                   <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto latest_img">
                       <a
-                        href="../shop/single-product-fullwidth.html"
-                        class="d-block width-75"
+                        href="#"
+                        class="d-block "
                       >
                         <img
                           class="img-fluid"
-                          src="../../assets/img/300X300/img1.jpg"
-                          alt="Image Description"
+                          src={latestImg1}
+                          alt="Image Description" 
+                          className="img-fluid"
                         />
                       </a>
                     </div>
                     <div class="col">
-                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
-                        <a href="../shop/single-product-fullwidth.html">
+                      <p class="latest_product__heading mb-2">
+                        <a href="#">
                           Notebook Black Spire V Nitro VN7-591G
                         </a>
-                      </h3>
-                      <div
-                        class="text-warning text-ls-n2 font-size-16 mb-1"
-                        style={{ width: "80px" }}
-                      >
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="far fa-star text-muted"></small>
-                      </div>
-                      <div class="font-weight-bold">
-                        <del class="font-size-11 text-gray-9 d-block">
+                      </p>
+                      <div class="fw-bold latest_product__price">
+                        <del class="d-block fs-6">
                           $2299.00
                         </del>
-                        <ins class="font-size-15 text-red text-decoration-none d-block">
+                        <ins class="text-danger text-red text-decoration-none d-block">
                           $1999.00
                         </ins>
                       </div>
@@ -264,107 +260,80 @@ const ProductsPage = () => {
                 </li>
                 <li class="mb-4">
                   <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto latest_img">
                       <a
-                        href="../shop/single-product-fullwidth.html"
-                        class="d-block width-75"
+                        href="#"
+                        class="d-block "
                       >
                         <img
                           class="img-fluid"
-                          src="../../assets/img/300X300/img3.jpg"
-                          alt="Image Description"
+                          src={latestImg2}
+                          alt="Image Description" 
+                          className="img-fluid"
                         />
                       </a>
                     </div>
                     <div class="col">
-                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
-                        <a href="../shop/single-product-fullwidth.html">
+                      <p class="latest_product__heading mb-2">
+                        <a href="#">
                           Notebook Black Spire V Nitro VN7-591G
                         </a>
-                      </h3>
-                      <div
-                        class="text-warning text-ls-n2 font-size-16 mb-1"
-                        style={{ width: "80px" }}
-                      >
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="far fa-star text-muted"></small>
-                      </div>
-                      <div class="font-weight-bold font-size-15">$499.00</div>
+                      </p>
+                      <div class="latest_product__price">$499.00</div>
                     </div>
                   </div>
                 </li>
                 <li class="mb-4">
                   <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto latest_img">
                       <a
-                        href="../shop/single-product-fullwidth.html"
-                        class="d-block width-75"
+                        href="#"
+                        class="d-block "
                       >
                         <img
                           class="img-fluid"
-                          src="../../assets/img/300X300/img5.jpg"
-                          alt="Image Description"
+                          src={latestImg3}
+                          alt="Image Description" 
+                          className="img-fluid"
                         />
                       </a>
                     </div>
                     <div class="col">
-                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
-                        <a href="../shop/single-product-fullwidth.html">
+                      <p class="latest_product__heading mb-2">
+                        <a href="#">
                           Tablet Thin EliteBook Revolve 810 G6
                         </a>
-                      </h3>
-                      <div
-                        class="text-warning text-ls-n2 font-size-16 mb-1"
-                        style={{ width: "80px" }}
-                      >
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="far fa-star text-muted"></small>
-                      </div>
-                      <div class="font-weight-bold font-size-15">$100.00</div>
+                      </p>
+                      <div class="latest_product__price">$100.00</div>
                     </div>
                   </div>
                 </li>
                 <li class="mb-4">
                   <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto latest_img">
                       <a
-                        href="../shop/single-product-fullwidth.html"
-                        class="d-block width-75"
+                        href="#"
+                        class="d-block "
                       >
                         <img
                           class="img-fluid"
-                          src="../../assets/img/300X300/img6.jpg"
-                          alt="Image Description"
+                          src={latestImg4}
+                          alt="Image Description" 
+                          className="img-fluid"
                         />
                       </a>
                     </div>
                     <div class="col">
-                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
-                        <a href="../shop/single-product-fullwidth.html">
+                      <p class="latest_product__heading mb-2">
+                        <a href="#">
                           Notebook Purple G952VX-T7008T
                         </a>
-                      </h3>
-                      <div
-                        class="text-warning text-ls-n2 font-size-16 mb-1"
-                        style={{ width: "80px" }}
-                      >
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="far fa-star text-muted"></small>
-                      </div>
-                      <div class="font-weight-bold">
-                        <del class="font-size-11 text-gray-9 d-block">
+                      </p>
+                      <div class="fw-bold latest_product__price">
+                        <del class="fs-6 d-block">
                           $2299.00
                         </del>
-                        <ins class="font-size-15 text-red text-decoration-none d-block">
+                        <ins class="text-danger text-decoration-none d-block">
                           $1999.00
                         </ins>
                       </div>
@@ -373,35 +342,26 @@ const ProductsPage = () => {
                 </li>
                 <li class="mb-4">
                   <div class="row">
-                    <div class="col-auto">
+                    <div class="col-auto latest_img">
                       <a
-                        href="../shop/single-product-fullwidth.html"
-                        class="d-block width-75"
+                        href="#"
+                        class="d-block "
                       >
                         <img
                           class="img-fluid"
-                          src="../../assets/img/300X300/img10.png"
-                          alt="Image Description"
+                          src={latestImg5}
+                          alt="Image Description" 
+                          className="img-fluid"
                         />
                       </a>
                     </div>
                     <div class="col">
-                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
-                        <a href="../shop/single-product-fullwidth.html">
+                      <p class="latest_product__heading mb-2">
+                        <a href="#">
                           Laptop Yoga 21 80JH0035GE W8.1
                         </a>
-                      </h3>
-                      <div
-                        class="text-warning text-ls-n2 font-size-16 mb-1"
-                        style={{ width: "80px" }}
-                      >
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="fas fa-star"></small>
-                        <small class="far fa-star text-muted"></small>
-                      </div>
-                      <div class="font-weight-bold font-size-15">$1200.00</div>
+                      </p>
+                      <div class="latest_product__price">$1200.00</div>
                     </div>
                   </div>
                 </li>
@@ -557,7 +517,7 @@ const ProductsPage = () => {
                             </div>
                             <h5 className="mb-1 product_item__title">
                               <a
-                                href="../shop/single-product-fullwidth.html"
+                                href="#"
                                 className="text-blue font-weight-bold"
                               >
                                 {title}
@@ -565,13 +525,13 @@ const ProductsPage = () => {
                             </h5>
                             <div className="mb-2">
                               <a
-                                href="../shop/single-product-fullwidth.html"
+                                href="#"
                                 className="d-block text-center"
                               >
                                 <img
                                   className="img-fluid"
                                   src={img}
-                                  alt="Image Description"
+                                  alt="Image Description" 
                                 />
                               </a>
                             </div>
@@ -581,7 +541,7 @@ const ProductsPage = () => {
                               </div>
                               <div className="d-none d-xl-block prodcut-add-cart">
                                 <a
-                                  href="../shop/single-product-fullwidth.html"
+                                  href="#"
                                   className="btn_add__cart"
                                 >
                                   <i className="fa-solid fa-cart-arrow-down"></i>

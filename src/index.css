@@ -1473,6 +1473,22 @@ background-size: cover;
   transform: translate(-50%, -50%);
 }
 
+.latest_img img{
+  height: 80px;
+}
+.latest_product__heading {
+  font-size: 1.5rem;
+}
+
+.latest_product__price{
+  font-size: 1.5rem;
+  font-weight: 700 !important;
+}
+
+.latest_product__heading a{
+  color: #1e2022;
+}
+
 .product_heading h3{
   font-size: 2.5rem;
   font-weight: 400;
