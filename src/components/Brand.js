@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import BrandApi from "../API/BrandApi";
 import { NavLink } from "react-router-dom";
 
-const Brand = (props) => {
-  const [brandData, setBrandData] = useState(BrandApi);
+const Brand = ({ dataType = ['product','home'] }) => {
+  const [data, setData] = useState([]);
+
+  // Load the data based on dataType
+  useEffect(() => {
+    const fetchedData = BrandApi[0][dataType];
+    if (fetchedData) {
+      setData(fetchedData);
+    }
+  }, [dataType]);
+
+
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -38,7 +49,7 @@ const Brand = (props) => {
               // showDots={true}
               removeArrowOnDeviceType={["tablet", "mobile"]}
             >
-              {brandData.map((brand) => (
+              {data && data.map((brand) => (
                 <div className="brand-item py-4" key={brand.id}>
                   <NavLink href="#" tabindex="-1" className="link_hover__brand">
                     <img

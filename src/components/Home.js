@@ -24,7 +24,7 @@ const Home = () => {
     <BestSeller />
     <Poster />
     <RecentlyView />
-    <Brand />
+    <Brand dataType="home" />
     <OnsaleProduct />
     <Footer />
     </>

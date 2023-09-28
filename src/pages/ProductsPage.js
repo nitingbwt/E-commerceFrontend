@@ -4,6 +4,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProductApi from "../API/ProductApi";
 import Brand from "../components/Brand";
+import OnsaleProduct from "../components/OnsaleProduct";
+import banner1 from "../images/product/banner-1.jpg";
+import banner2 from "../images/product/banner-2.jpg";
 
 const ProductsPage = () => {
   const [productData, setProductData] = useState(ProductApi);
@@ -189,10 +192,7 @@ const ProductsPage = () => {
                   </div>
                 </div>
 
-                <a
-                  class="link_collapse d-inline-flex mt-2"
-                href="#"
-                >
+                <a class="link_collapse d-inline-flex mt-2" href="#">
                   <span class="link__icon text-gray-27 bg-white">
                     <span class="link__icon-inner">+</span>
                   </span>
@@ -201,9 +201,221 @@ const ProductsPage = () => {
                 </a>
               </div>
             </div>
-            
+
+            <div className="range_slider mb-5">
+              <h4 className="fw-bold mb-4">Price</h4>
+              <div className="range_silder__group mb-4">
+                <input type="range" class="form-range" id="customRange1" />
+                <label for="customRange1" class="form-label">
+                  Price: $0 --- $3456
+                </label>
+              </div>
+              <button type="submit" class="btn rounded-lg">
+                Filter
+              </button>
+            </div>
+            <div class="mb-8">
+              <div class="border-bottom border-color-1 mb-5">
+                <h3 class="section_title section-title__sm mb-0 pb-2 font-size-18">
+                  Latest Products
+                </h3>
+              </div>
+              <ul class="list-unstyled">
+                <li class="mb-4">
+                  <div class="row">
+                    <div class="col-auto">
+                      <a
+                        href="../shop/single-product-fullwidth.html"
+                        class="d-block width-75"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="../../assets/img/300X300/img1.jpg"
+                          alt="Image Description"
+                        />
+                      </a>
+                    </div>
+                    <div class="col">
+                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
+                        <a href="../shop/single-product-fullwidth.html">
+                          Notebook Black Spire V Nitro VN7-591G
+                        </a>
+                      </h3>
+                      <div
+                        class="text-warning text-ls-n2 font-size-16 mb-1"
+                        style={{ width: "80px" }}
+                      >
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="far fa-star text-muted"></small>
+                      </div>
+                      <div class="font-weight-bold">
+                        <del class="font-size-11 text-gray-9 d-block">
+                          $2299.00
+                        </del>
+                        <ins class="font-size-15 text-red text-decoration-none d-block">
+                          $1999.00
+                        </ins>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-4">
+                  <div class="row">
+                    <div class="col-auto">
+                      <a
+                        href="../shop/single-product-fullwidth.html"
+                        class="d-block width-75"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="../../assets/img/300X300/img3.jpg"
+                          alt="Image Description"
+                        />
+                      </a>
+                    </div>
+                    <div class="col">
+                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
+                        <a href="../shop/single-product-fullwidth.html">
+                          Notebook Black Spire V Nitro VN7-591G
+                        </a>
+                      </h3>
+                      <div
+                        class="text-warning text-ls-n2 font-size-16 mb-1"
+                        style={{ width: "80px" }}
+                      >
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="far fa-star text-muted"></small>
+                      </div>
+                      <div class="font-weight-bold font-size-15">$499.00</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-4">
+                  <div class="row">
+                    <div class="col-auto">
+                      <a
+                        href="../shop/single-product-fullwidth.html"
+                        class="d-block width-75"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="../../assets/img/300X300/img5.jpg"
+                          alt="Image Description"
+                        />
+                      </a>
+                    </div>
+                    <div class="col">
+                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
+                        <a href="../shop/single-product-fullwidth.html">
+                          Tablet Thin EliteBook Revolve 810 G6
+                        </a>
+                      </h3>
+                      <div
+                        class="text-warning text-ls-n2 font-size-16 mb-1"
+                        style={{ width: "80px" }}
+                      >
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="far fa-star text-muted"></small>
+                      </div>
+                      <div class="font-weight-bold font-size-15">$100.00</div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-4">
+                  <div class="row">
+                    <div class="col-auto">
+                      <a
+                        href="../shop/single-product-fullwidth.html"
+                        class="d-block width-75"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="../../assets/img/300X300/img6.jpg"
+                          alt="Image Description"
+                        />
+                      </a>
+                    </div>
+                    <div class="col">
+                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
+                        <a href="../shop/single-product-fullwidth.html">
+                          Notebook Purple G952VX-T7008T
+                        </a>
+                      </h3>
+                      <div
+                        class="text-warning text-ls-n2 font-size-16 mb-1"
+                        style={{ width: "80px" }}
+                      >
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="far fa-star text-muted"></small>
+                      </div>
+                      <div class="font-weight-bold">
+                        <del class="font-size-11 text-gray-9 d-block">
+                          $2299.00
+                        </del>
+                        <ins class="font-size-15 text-red text-decoration-none d-block">
+                          $1999.00
+                        </ins>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mb-4">
+                  <div class="row">
+                    <div class="col-auto">
+                      <a
+                        href="../shop/single-product-fullwidth.html"
+                        class="d-block width-75"
+                      >
+                        <img
+                          class="img-fluid"
+                          src="../../assets/img/300X300/img10.png"
+                          alt="Image Description"
+                        />
+                      </a>
+                    </div>
+                    <div class="col">
+                      <h3 class="text-lh-1dot2 font-size-14 mb-0">
+                        <a href="../shop/single-product-fullwidth.html">
+                          Laptop Yoga 21 80JH0035GE W8.1
+                        </a>
+                      </h3>
+                      <div
+                        class="text-warning text-ls-n2 font-size-16 mb-1"
+                        style={{ width: "80px" }}
+                      >
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="far fa-star text-muted"></small>
+                      </div>
+                      <div class="font-weight-bold font-size-15">$1200.00</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="col-xl-9">
+            <div className="row">
+              <div className="col-12 mb-5 pb-5">
+                <a href="">
+                  <img src={banner1} alt="" className="img-fluid" />
+                </a>
+              </div>
+            </div>
             <div class="d-block d-md-flex justify-content-between align-items-center mb-3 product_heading">
               <h3 class="mb-2 mb-md-0">Smart Phones &amp; Tablets</h3>
               <p class="mb-0">Showing 1–25 of 56 results</p>
@@ -399,7 +611,8 @@ const ProductsPage = () => {
           </div>
         </div>
       </div>
-      <Brand />
+      <Brand dataType="product" />
+      <OnsaleProduct />
       <Footer />
     </>
   );
